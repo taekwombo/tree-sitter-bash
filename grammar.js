@@ -442,6 +442,7 @@ module.exports = grammar({
       repeat1(prec(-1, seq(
         $._concat,
         choice(
+          token.immediate('#'),
           $._primary_expression,
           $._special_character,
         )
